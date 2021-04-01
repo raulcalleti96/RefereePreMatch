@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RefereePreMatch</string>
+    <string name="created">Created by:</string>
 </resources>
