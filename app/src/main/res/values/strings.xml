@@ -3,4 +3,9 @@
     <string name="created">Created by:</string>
     <string name="email">Email</string>
     <string name="login">Login</string>
+    <string name="arbitrocuenta">Árbitro</string>
+    <string name="arbitros">Árbitros</string>
+    <string name="partidos">Partidos</string>
+    <string name="recibos">Recibo</string>
+    <string name="informes">Informes</string>
 </resources>
