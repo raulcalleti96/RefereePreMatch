@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="@+id/imageView9"
+        tools:layout_editor_absoluteX="-32dp">
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="224dp"
+            android:layout_height="33dp"
+            android:background="#5C5C5C"
+            android:text="@string/privacidad"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="118dp"
+            tools:layout_editor_absoluteY="562dp" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="224dp"
+            android:layout_height="33dp"
+            android:background="#5C5C5C"
+            android:text="@string/licencia"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="118dp"
+            tools:layout_editor_absoluteY="491dp" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/infolegal"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="97dp"
+            tools:layout_editor_absoluteY="375dp" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="@string/sobrenosotros"
+            android:textColor="#737373"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="276dp" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/legal"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="367dp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notificaciones"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="187dp" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            tools:layout_editor_absoluteX="257dp"
+            tools:layout_editor_absoluteY="192dp" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/notificaciones"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="179dp" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/acercade"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="282dp" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="224dp"
+            android:layout_height="33dp"
+            android:background="#5C5C5C"
+            android:text="@string/readme"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="118dp"
+            tools:layout_editor_absoluteY="424dp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="154dp"
+            android:layout_marginRight="154dp"
+            android:text="@string/ajustes"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="10dp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/idioma"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="97dp"
+            tools:layout_editor_absoluteY="99dp" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Version"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="167dp"
+            tools:layout_editor_absoluteY="647dp" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="152dp"
+            android:layout_height="33dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            tools:layout_editor_absoluteX="193dp"
+            tools:layout_editor_absoluteY="99dp" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#770808"
+            android:text="@string/cerrarsesion"
+            android:textColor="#FFFFFF"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="673dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/botonvolver"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:background="@drawable/volver"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ajustes"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="10dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/traductor"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="92dp" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="152dp"
+        android:layout_height="33dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        tools:layout_editor_absoluteX="193dp"
+        tools:layout_editor_absoluteY="99dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="377dp"
+        android:layout_height="42dp"
+        android:background="#770808"
+        android:text="@string/cerrarsesion"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="673dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

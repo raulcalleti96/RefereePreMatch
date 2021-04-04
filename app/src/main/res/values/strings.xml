@@ -11,4 +11,15 @@
     <string name="delegado">Delegado</string>
     <string name="estadios">Estadios</string>
     <string name="registro">En caso de no recordar la clave o no tener acceso. Por favor, contacte con su delegado</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="idioma">Idioma</string>
+    <string name="cerrarsesion">Cerrar sesión</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string name="sobrenosotros">Acerca de</string>
+    <string name="Version">Versión: 1.0. 2021</string>
+    <string name="infolegal">Información legal</string>
+    <string name="readme"> Readme</string>
+    <string name="licencia"> Licencia</string>
+    <string name="terminosuso">Términos de uso</string>
+    <string name="privacidad">Privacidad</string>
 </resources>
