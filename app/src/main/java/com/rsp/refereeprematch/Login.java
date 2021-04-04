@@ -12,11 +12,15 @@ public class Login extends AppCompatActivity
 {
 
     private Button buttonLogin;
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loginscreen);
 
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
+
+
 
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
