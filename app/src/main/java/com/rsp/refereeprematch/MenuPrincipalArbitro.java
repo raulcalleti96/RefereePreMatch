@@ -9,7 +9,7 @@ import android.widget.Switch;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-public class MenuPrincipalArbiter extends AppCompatActivity {
+public class MenuPrincipalArbitro extends AppCompatActivity {
 
 
 

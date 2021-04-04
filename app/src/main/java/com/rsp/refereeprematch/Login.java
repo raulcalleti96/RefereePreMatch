@@ -1,14 +1,12 @@
 package com.rsp.refereeprematch;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 public class Login extends AppCompatActivity
 {
@@ -20,11 +18,12 @@ public class Login extends AppCompatActivity
 
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
 
+
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent (Login.this, MenuPrincipalArbiter.class);
+                Intent intent = new Intent (Login.this, MenuPrincipalArbitro.class);
                 startActivity(intent);
             }
         });

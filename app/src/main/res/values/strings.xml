@@ -2,10 +2,13 @@
     <string name="app_name">RefereePreMatch</string>
     <string name="created">Created by:</string>
     <string name="email">Email</string>
-    <string name="login">Login</string>
+    <string name="login">Acceder</string>
     <string name="arbitrocuenta">Árbitro</string>
     <string name="arbitros">Árbitros</string>
     <string name="partidos">Partidos</string>
     <string name="recibos">Recibo</string>
     <string name="informes">Informes</string>
+    <string name="delegado">Delegado</string>
+    <string name="estadios">Estadios</string>
+    <string name="registro">En caso de no recordar la clave o no tener acceso. Por favor, contacte con su delegado</string>
 </resources>

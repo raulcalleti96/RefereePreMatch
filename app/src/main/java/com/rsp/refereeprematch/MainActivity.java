@@ -14,9 +14,12 @@ public class MainActivity extends AppCompatActivity {
     private TextView titulotv;
     private TextView createdtv;
     private ImageView logotv;
-    private static int TIEMPO = 3000; //Time to launch the another activity
+    private static int TIEMPO = 3000;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         titulotv = (TextView) findViewById(R.id.titulotv);
