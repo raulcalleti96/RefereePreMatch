@@ -34,7 +34,7 @@ public class Ajustes extends AppCompatActivity
         buttonLicence =  findViewById(R.id.buttonlicence);
         buttonPriva =  findViewById(R.id.buttonpriva);
 
-        sesionbtn.setOnClickListener(new View.OnClickListener() {
+        buttonVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
