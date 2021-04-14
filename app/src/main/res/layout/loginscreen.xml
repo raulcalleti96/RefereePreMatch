@@ -26,6 +26,7 @@
         android:layout_marginBottom="153dp"
         android:background="@drawable/botonredondo"
         android:fontFamily="sans-serif-black"
+        android:onClick="iniciarSesion"
         android:text="@string/login"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"

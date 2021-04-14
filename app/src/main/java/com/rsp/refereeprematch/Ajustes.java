@@ -9,6 +9,8 @@ import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Ajustes extends AppCompatActivity
 {
     private Button sesionbtn;
@@ -38,6 +40,7 @@ public class Ajustes extends AppCompatActivity
             @Override
             public void onClick(View view) {
 
+                FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent (Ajustes.this, MenuPrincipalArbitro.class);
                 startActivity(intent);
             }
@@ -76,6 +79,7 @@ public class Ajustes extends AppCompatActivity
             }
         });
 
-
     }
+
+
 }
