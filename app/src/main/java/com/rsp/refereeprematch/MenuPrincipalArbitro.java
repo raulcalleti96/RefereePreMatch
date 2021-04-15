@@ -26,6 +26,9 @@ public class MenuPrincipalArbitro extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent (MenuPrincipalArbitro.this, Ajustes.class);
+                Bundle b = new Bundle();
+                b.putInt("id", 0);
+                intent.putExtras(b);
                 startActivity(intent);
             }
         });

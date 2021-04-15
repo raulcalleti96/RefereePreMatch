@@ -22,6 +22,8 @@ public class Ajustes extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ajustes);
+        Bundle b = getIntent().getExtras();
+        int id = b.getInt("id");
 
 
         Spinner dropdown = findViewById(R.id.spinner1);
@@ -40,16 +42,20 @@ public class Ajustes extends AppCompatActivity
             @Override
             public void onClick(View view) {
 
-                FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent (Ajustes.this, MenuPrincipalArbitro.class);
-                startActivity(intent);
+                if(id == 0) {
+                    Intent intent = new Intent(Ajustes.this, MenuPrincipalArbitro.class);
+                    startActivity(intent);
+                }else{
+                    Intent intent = new Intent(Ajustes.this, MenuPrincipalDelegado.class);
+                    startActivity(intent);
+                }
             }
         });
 
         sesionbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent (Ajustes.this, Login.class);
                 startActivity(intent);
             }
