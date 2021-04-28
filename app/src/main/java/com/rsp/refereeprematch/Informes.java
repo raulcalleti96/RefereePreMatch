@@ -1,27 +1,22 @@
 package com.rsp.refereeprematch;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Estadios extends AppCompatActivity {
+public class Informes extends AppCompatActivity {
 
 
     //Firebase
@@ -29,11 +24,11 @@ public class Estadios extends AppCompatActivity {
 
     //Android
     public ListView listView;
-    private ArrayList<Estadio> arrayList = new ArrayList<Estadio>();
+    private ArrayList<Informe> arrayList = new ArrayList<>();
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.estadios);
+        setContentView(R.layout.informes);
         db = FirebaseFirestore.getInstance();
         listView =  (ListView) findViewById(R.id.listadoView);
         loadDatainListview();
@@ -41,7 +36,7 @@ public class Estadios extends AppCompatActivity {
 
     private void loadDatainListview(){
 
-        db.collection("Estadios").get()
+        db.collection("Informes").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
@@ -55,21 +50,21 @@ public class Estadios extends AppCompatActivity {
                             for (DocumentSnapshot d : list) {
                                 // after getting this list we are passing
                                 // that list to our object class.
-                                Estadio estadio = d.toObject(Estadio.class);
+                                Informe Informe = d.toObject(Informe.class);
 
                                 // after getting data from Firebase we are
                                 // storing that data in our array list
-                                arrayList.add(estadio);
+                                arrayList.add(Informe);
                             }
                             // after that we are passing our array list to our adapter class.
-                            EstadiosAdapter estadiosAdapter = new EstadiosAdapter(Estadios.this, arrayList);
+                            InformesAdapter informesAdapter = new InformesAdapter(Informes.this, arrayList);
 
                             // after passing this array list to our adapter
                             // class we are setting our adapter to our list view.
-                            listView.setAdapter(estadiosAdapter);
+                            listView.setAdapter(informesAdapter);
                         } else {
                             // if the snapshot is empty we are displaying a toast message.
-                            Toast.makeText(Estadios.this, "No data found in Database", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Informes.this, "No data found in Database", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }).addOnFailureListener(new OnFailureListener() {
@@ -77,7 +72,7 @@ public class Estadios extends AppCompatActivity {
             public void onFailure(@NonNull Exception e) {
                 // we are displaying a toast message
                 // when we get any error from Firebase.
-                Toast.makeText(Estadios.this, "Fail to load data..", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Informes.this, "Fail to load data..", Toast.LENGTH_SHORT).show();
             }
         });
 
