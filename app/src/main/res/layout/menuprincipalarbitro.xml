@@ -8,19 +8,19 @@
     android:background="@drawable/campo">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/arbitrosbtn"
         android:layout_width="76dp"
         android:layout_height="0dp"
         android:layout_marginTop="66dp"
         android:layout_marginBottom="460dp"
         android:background="@drawable/iconousers"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/estadiobtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/estadiobtn"
         android:layout_width="80dp"
         android:layout_height="0dp"
         android:layout_marginBottom="57dp"
@@ -28,7 +28,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/arbitrosbtn" />
 
     <Button
         android:id="@+id/button4"
@@ -97,7 +97,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/arbitrosbtn" />
 
     <TextView
         android:id="@+id/textView3"

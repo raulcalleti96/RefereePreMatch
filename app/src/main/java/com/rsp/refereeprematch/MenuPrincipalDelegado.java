@@ -10,12 +10,14 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MenuPrincipalDelegado extends AppCompatActivity {
 
 
-    private Button ajustesbtn;
+    private Button ajustesbtn, arbitrosbtn, estadiobtn;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menuprincipaldelegado);
 
+        arbitrosbtn = findViewById(R.id.arbitrosbtn);
         ajustesbtn = findViewById(R.id.ajustesbtn);
+        estadiobtn = findViewById(R.id.estadiobtn);
 
         ajustesbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,5 +30,30 @@ public class MenuPrincipalDelegado extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        arbitrosbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent (MenuPrincipalDelegado.this, Arbitros.class);
+                Bundle b = new Bundle();
+                b.putInt("id", 1);
+                intent.putExtras(b);
+                startActivity(intent);
+            }
+        });
+
+        estadiobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent (MenuPrincipalDelegado.this, Estadios.class);
+                Bundle b = new Bundle();
+                b.putInt("id", 1);
+                intent.putExtras(b);
+                startActivity(intent);
+            }
+        });
+
     }
 }
