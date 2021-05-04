@@ -1,6 +1,6 @@
 package com.rsp.refereeprematch;
 
-public class Users {
+public class Arbitro {
 
     private String Apellidos;
 
@@ -50,7 +50,17 @@ public class Users {
     private String FechaNacimiento;
     private String Nombre;
 
-    public Users() {
+    public String getTelefono() {
+        return Telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        Telefono = telefono;
+    }
+
+    private String Telefono;
+
+    public Arbitro() {
 
     }
 

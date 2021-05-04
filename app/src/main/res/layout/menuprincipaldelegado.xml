@@ -7,46 +7,66 @@
     android:layout_height="match_parent"
     android:background="@drawable/campo">
 
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/nuevo"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <Button
         android:id="@+id/arbitrosbtn"
         android:layout_width="76dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="66dp"
-        android:layout_marginBottom="460dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="29dp"
         android:background="@drawable/iconousers"
-        app:layout_constraintBottom_toTopOf="@+id/estadiobtn"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
         android:id="@+id/estadiobtn"
-        android:layout_width="80dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="57dp"
+        android:layout_width="0dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginLeft="166dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginRight="66dp"
+        android:layout_marginBottom="53dp"
         android:background="@drawable/iconoestadios"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/textView10"
+        app:layout_constraintEnd_toStartOf="@+id/button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/arbitrosbtn" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/recibobtn"
         android:layout_width="78dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="5dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginBottom="183dp"
         android:background="@drawable/iconorecibo"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toTopOf="@+id/partidosbtn" />
 
     <Button
         android:id="@+id/ajustesbtn"
-        android:layout_width="40dp"
+        android:layout_width="0dp"
         android:layout_height="42dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="256dp"
         android:layout_marginRight="256dp"
@@ -58,29 +78,29 @@
     <Button
         android:id="@+id/partidosbtn"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="68dp"
         android:layout_marginStart="6dp"
         android:layout_marginLeft="6dp"
+        android:layout_marginTop="221dp"
         android:layout_marginEnd="6dp"
         android:layout_marginRight="6dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="222dp"
         android:background="@drawable/iconopartido"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="82dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/partidos"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/recibobtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/partidosbtn" />
@@ -89,6 +109,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
         android:layout_marginBottom="90dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/arbitros"
@@ -98,7 +119,7 @@
         app:layout_constraintBottom_toTopOf="@+id/partidosbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/arbitrosbtn" />
+        app:layout_constraintTop_toBottomOf="@+id/ajustesbtn" />
 
     <TextView
         android:id="@+id/textView3"
@@ -110,8 +131,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="@+id/recibobtn"
-        app:layout_constraintTop_toBottomOf="@+id/recibobtn" />
+        app:layout_constraintEnd_toEndOf="@+id/recibobtn" />
 
     <TextView
         android:id="@+id/textView5"
@@ -124,16 +144,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
         android:text="@string/delegado"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -141,5 +160,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ajustesbtn"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="27dp"
+        android:background="@android:drawable/ic_menu_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/estadiobtn"
+        app:layout_constraintTop_toTopOf="@+id/estadiobtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

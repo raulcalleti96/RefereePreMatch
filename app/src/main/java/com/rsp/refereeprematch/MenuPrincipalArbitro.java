@@ -4,13 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.Switch;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-
-import com.google.firebase.firestore.auth.User;
 
 public class MenuPrincipalArbitro extends AppCompatActivity {
 
@@ -64,7 +59,7 @@ public class MenuPrincipalArbitro extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent (MenuPrincipalArbitro.this, Users.class);
+                Intent intent = new Intent (MenuPrincipalArbitro.this, Arbitro.class);
                 Bundle b = new Bundle();
                 b.putInt("id", 0);
                 intent.putExtras(b);

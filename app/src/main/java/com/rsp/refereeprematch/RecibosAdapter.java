@@ -39,7 +39,8 @@ public class RecibosAdapter extends ArrayAdapter<Recibo> {
         // after initializing our items we are
         // setting data to our view.
         // below line is use to set data to our text view.
-        reciboText.setText(recibo.getNombre());
+        String recibot = new Double(recibo.getPagoTotal()).toString();
+        reciboText.setText(recibot);
 
         // below line is use to add item click listener
         // for our item of list view.
@@ -48,7 +49,7 @@ public class RecibosAdapter extends ArrayAdapter<Recibo> {
             public void onClick(View v) {
                 // on the item click on our list view.
                 // we are displaying a toast message.
-                Toast.makeText(getContext(), "Item clicked is : " + recibo.getNombre(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Item clicked is : " + recibo.getPagoTotal(), Toast.LENGTH_SHORT).show();
             }
         });
         return listitemView;
