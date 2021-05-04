@@ -23,4 +23,11 @@
     <string name="terminosuso">Términos de uso</string>
     <string name="privacidad">Privacidad</string>
     <string name="nuevo">Nuevo</string>
+    <string-array name="crearnuevoDelegado">
+        <item>Seleccione el nuevo dato</item>
+        <item>Arbitro</item>
+        <item>Estadio</item>
+        <item>Recibo</item>
+        <item>Partido</item>
+    </string-array>
 </resources>
