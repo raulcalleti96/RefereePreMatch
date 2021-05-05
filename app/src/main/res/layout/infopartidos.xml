@@ -45,7 +45,7 @@
         android:layout_marginRight="19dp"
         android:layout_marginBottom="53dp"
         android:text="Asistente 2"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/eliminarbtn"
         app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -66,7 +66,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textView19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/fechanacimientotv" />
 
     <EditText
         android:id="@+id/editTextTextPersonName7"
@@ -81,7 +81,7 @@
         android:text="Name"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/eliminarbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView18"
         app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName4" />
@@ -126,27 +126,27 @@
         android:layout_width="411dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintBottom_toTopOf="@+id/nombreapetv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/fondorfef" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/volverimg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="7dp"
         android:layout_marginLeft="7dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="224dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintBottom_toTopOf="@+id/nombreapetv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/volveroro" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/nombreapetv"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="408dp"
@@ -157,10 +157,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toBottomOf="@+id/volverimg" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/telefonotv"
         android:layout_width="155dp"
         android:layout_height="38dp"
         android:layout_marginStart="11dp"
@@ -174,10 +174,10 @@
         android:text="Equipo local"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/dnitv"
         app:layout_constraintEnd_toStartOf="@+id/textView16"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/nombreapetv"
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -187,7 +187,7 @@
         android:orientation="horizontal" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/dnitv"
         android:layout_width="152dp"
         android:layout_height="37dp"
         android:layout_marginTop="4dp"
@@ -201,10 +201,10 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/nombreapetv" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/eliminarbtn"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="11dp"
@@ -223,7 +223,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/fechanacimientotv"
         android:layout_width="152dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
@@ -254,9 +254,9 @@
         android:text="/"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName3"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toEndOf="@+id/editTextPhone"
-        app:layout_constraintTop_toTopOf="@+id/textView11"
+        app:layout_constraintEnd_toStartOf="@+id/dnitv"
+        app:layout_constraintStart_toEndOf="@+id/telefonotv"
+        app:layout_constraintTop_toTopOf="@+id/nombreapetv"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
@@ -274,8 +274,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintStart_toEndOf="@+id/fechanacimientotv"
+        app:layout_constraintTop_toBottomOf="@+id/dnitv" />
 
     <TextView
         android:id="@+id/textView17"

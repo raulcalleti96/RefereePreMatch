@@ -1,6 +1,8 @@
 package com.rsp.refereeprematch;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +14,11 @@ import java.util.List;
 
 public class ArbitrosAdapter extends ArrayAdapter<Arbitro> {
 
-    public ArbitrosAdapter(Context context, List<Arbitro> object){
+    int id;
+    public ArbitrosAdapter(Context context, List<Arbitro> object, int id){
 
         super(context,0, object);
+
     }
 
 
@@ -36,7 +40,12 @@ public class ArbitrosAdapter extends ArrayAdapter<Arbitro> {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(getContext(), "Usuario seleccionado : " + users.getNombre(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent (getContext(), InfoContacto.class);
+                Bundle b = new Bundle();
+                b.putInt("id", id);
+                b.putString("email", users.getEmail());
+                intent.putExtras(b);
+                getContext().startActivity(intent);
             }
         });
         return listitemView;
