@@ -158,13 +158,13 @@
         android:layout_marginStart="7dp"
         android:layout_marginLeft="7dp"
         android:layout_marginTop="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/nombreapetv"
+        app:layout_constraintBottom_toTopOf="@+id/nombrestadiotv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/volveroro" />
 
     <TextView
-        android:id="@+id/nombreapetv"
+        android:id="@+id/nombrestadiotv"
         android:layout_width="411dp"
         android:layout_height="0dp"
         android:layout_marginBottom="40dp"
@@ -260,6 +260,6 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView26"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreapetv" />
+        app:layout_constraintTop_toBottomOf="@+id/nombrestadiotv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

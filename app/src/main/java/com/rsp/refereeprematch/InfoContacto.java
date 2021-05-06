@@ -29,7 +29,6 @@ public class InfoContacto extends AppCompatActivity {
     String email;
     int id;
     TextView nombre, apellidos, telefono, fechanacimiento, dni, categoria, clave;
-    String nombres, apellidoss, telefonos, fechanacimientos, dnis, categorias, claves;
     ImageView volver;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

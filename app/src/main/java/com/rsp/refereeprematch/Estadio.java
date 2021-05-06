@@ -2,8 +2,24 @@ package com.rsp.refereeprematch;
 
 public class Estadio {
 
-    String Nombre, Ciudad, CodigoPostal, Direccion, Foto, Localidad, Superficie;
-    int Capacidad;
+    String Nombre;
+    String Ciudad;
+    String CodigoPostal;
+    String Direccion;
+    String Foto;
+    String Localidad;
+    String Superficie;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    String id;
+    String Capacidad;
 
     public Estadio() {
 
@@ -65,11 +81,11 @@ public class Estadio {
         Superficie = superficie;
     }
 
-    public int getCapacidad() {
+    public String getCapacidad() {
         return Capacidad;
     }
 
-    public void setCapacidad(int capacidad) {
+    public void setCapacidad(String capacidad) {
         Capacidad = capacidad;
     }
 

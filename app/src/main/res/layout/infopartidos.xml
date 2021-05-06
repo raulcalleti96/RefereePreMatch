@@ -126,7 +126,7 @@
         android:layout_width="411dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/nombreapetv"
+        app:layout_constraintBottom_toTopOf="@+id/nombrestadiotv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -140,13 +140,13 @@
         android:layout_marginLeft="7dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="224dp"
-        app:layout_constraintBottom_toTopOf="@+id/nombreapetv"
+        app:layout_constraintBottom_toTopOf="@+id/nombrestadiotv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/volveroro" />
 
     <TextView
-        android:id="@+id/nombreapetv"
+        android:id="@+id/nombrestadiotv"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="408dp"
@@ -177,7 +177,7 @@
         app:layout_constraintBottom_toTopOf="@+id/dnitv"
         app:layout_constraintEnd_toStartOf="@+id/textView16"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreapetv"
+        app:layout_constraintTop_toBottomOf="@+id/nombrestadiotv"
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -201,7 +201,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/nombreapetv" />
+        app:layout_constraintTop_toBottomOf="@+id/nombrestadiotv" />
 
     <Button
         android:id="@+id/eliminarbtn"
@@ -256,7 +256,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName3"
         app:layout_constraintEnd_toStartOf="@+id/dnitv"
         app:layout_constraintStart_toEndOf="@+id/telefonotv"
-        app:layout_constraintTop_toTopOf="@+id/nombreapetv"
+        app:layout_constraintTop_toTopOf="@+id/nombrestadiotv"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText

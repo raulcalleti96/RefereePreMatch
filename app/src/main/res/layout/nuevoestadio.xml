@@ -16,7 +16,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView23"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName13" />
+        app:layout_constraintTop_toBottomOf="@+id/localidadtv" />
 
     <TextView
         android:id="@+id/textView23"
@@ -40,7 +40,7 @@
         android:layout_height="0dp"
         android:layout_marginBottom="2dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/nombreapetv"
+        app:layout_constraintBottom_toTopOf="@+id/nombrestadiotv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -53,13 +53,13 @@
         android:layout_marginStart="7dp"
         android:layout_marginLeft="7dp"
         android:layout_marginBottom="166dp"
-        app:layout_constraintBottom_toTopOf="@+id/nombreapetv"
+        app:layout_constraintBottom_toTopOf="@+id/nombrestadiotv"
         app:layout_constraintStart_toStartOf="@+id/imagenestadio"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/volveroro" />
 
     <TextView
-        android:id="@+id/nombreapetv"
+        android:id="@+id/nombrestadiotv"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="484dp"
@@ -85,7 +85,7 @@
         android:text="LOCALIDAD"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView23"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName13"
+        app:layout_constraintEnd_toStartOf="@+id/localidadtv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
@@ -101,7 +101,7 @@
         android:text="SUPERFICIE"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView20"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName10"
+        app:layout_constraintEnd_toStartOf="@+id/superficietv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -117,7 +117,7 @@
         android:text="DIRECCIÓN"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView21"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName11"
+        app:layout_constraintEnd_toStartOf="@+id/direcciontv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -133,12 +133,12 @@
         android:text="CIUDAD"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView22"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName12"
+        app:layout_constraintEnd_toStartOf="@+id/ciudadtv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName12"
+        android:id="@+id/ciudadtv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
@@ -149,10 +149,10 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+        app:layout_constraintTop_toBottomOf="@+id/direcciontv" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName13"
+        android:id="@+id/localidadtv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
@@ -162,10 +162,10 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName12" />
+        app:layout_constraintTop_toBottomOf="@+id/ciudadtv" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName11"
+        android:id="@+id/direcciontv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -176,10 +176,10 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView20"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10" />
+        app:layout_constraintTop_toBottomOf="@+id/superficietv" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName10"
+        android:id="@+id/superficietv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -190,7 +190,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
+        app:layout_constraintTop_toBottomOf="@+id/aforotv" />
 
     <TextView
         android:id="@+id/textView12"
@@ -204,12 +204,12 @@
         android:text="AFORO"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView15"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName8"
+        app:layout_constraintEnd_toStartOf="@+id/aforotv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreapetv" />
+        app:layout_constraintTop_toBottomOf="@+id/nombrestadiotv" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName8"
+        android:id="@+id/aforotv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -220,7 +220,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/nombreapetv" />
+        app:layout_constraintTop_toBottomOf="@+id/nombrestadiotv" />
 
     <Button
         android:id="@+id/button"

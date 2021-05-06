@@ -2,6 +2,8 @@ package com.rsp.refereeprematch;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,7 +48,7 @@ public class EstadiosAdapter extends ArrayAdapter<Estadio>{
         // setting data to our view.
         // below line is use to set data to our text view.
         EstadioText.setText(estadio.getNombre());
-         Picasso.get().load(estadio.getFoto()).into(EstadioFoto);
+        Picasso.get().load(estadio.getFoto()).into(EstadioFoto);
 
         // below line is use to add item click listener
         // for our item of list view.
@@ -55,7 +57,11 @@ public class EstadiosAdapter extends ArrayAdapter<Estadio>{
             public void onClick(View v) {
                 // on the item click on our list view.
                 // we are displaying a toast message.
-                Toast.makeText(getContext(), "Item clicked is : " + estadio.getNombre(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent (getContext(), InfoEstadio.class);
+                Bundle b = new Bundle();
+                b.putString("id", estadio.getId());
+                intent.putExtras(b);
+                getContext().startActivity(intent);
             }
         });
         return listitemView;
