@@ -14,11 +14,10 @@ import java.util.List;
 
 public class ArbitrosAdapter extends ArrayAdapter<Arbitro> {
 
-    int id;
-    public ArbitrosAdapter(Context context, List<Arbitro> object, int id){
+
+    public ArbitrosAdapter(Context context, List<Arbitro> object){
 
         super(context,0, object);
-
     }
 
 
@@ -42,7 +41,6 @@ public class ArbitrosAdapter extends ArrayAdapter<Arbitro> {
 
                 Intent intent = new Intent (getContext(), InfoContacto.class);
                 Bundle b = new Bundle();
-                b.putInt("id", id);
                 b.putString("email", users.getEmail());
                 intent.putExtras(b);
                 getContext().startActivity(intent);

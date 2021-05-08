@@ -1,6 +1,7 @@
 package com.rsp.refereeprematch;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -25,13 +26,17 @@ public class Recibos extends AppCompatActivity {
     //Android
     public ListView listView;
     private ArrayList<Recibo> arrayList = new ArrayList<>();
+    int id;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recibos);
+        Bundle b = getIntent().getExtras();
+        id = b.getInt("id");
         db = FirebaseFirestore.getInstance();
         listView =  (ListView) findViewById(R.id.listadoView);
         loadDatainListview();
+
     }
 
     private void loadDatainListview(){
@@ -57,7 +62,7 @@ public class Recibos extends AppCompatActivity {
                                 arrayList.add(recibo);
                             }
                             // after that we are passing our array list to our adapter class.
-                            RecibosAdapter recibosAdapter = new RecibosAdapter(Recibos.this, arrayList);
+                            RecibosAdapter recibosAdapter = new RecibosAdapter(Recibos.this, arrayList,id);
 
                             // after passing this array list to our adapter
                             // class we are setting our adapter to our list view.

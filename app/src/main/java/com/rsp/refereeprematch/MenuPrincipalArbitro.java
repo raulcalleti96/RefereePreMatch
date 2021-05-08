@@ -27,9 +27,6 @@ public class MenuPrincipalArbitro extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent (MenuPrincipalArbitro.this, Ajustes.class);
-                Bundle b = new Bundle();
-                b.putInt("id", 0);
-                intent.putExtras(b);
                 startActivity(intent);
             }
         });
@@ -38,9 +35,7 @@ public class MenuPrincipalArbitro extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent (MenuPrincipalArbitro.this, Partidos.class);
-                Bundle b = new Bundle();
-                b.putInt("id", 0);
-                intent.putExtras(b);
+
                 startActivity(intent);
             }
         });
@@ -49,9 +44,6 @@ public class MenuPrincipalArbitro extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent (MenuPrincipalArbitro.this, Recibos.class);
-                Bundle b = new Bundle();
-                b.putInt("id", 0);
-                intent.putExtras(b);
                 startActivity(intent);
             }
         });
@@ -60,9 +52,7 @@ public class MenuPrincipalArbitro extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent (MenuPrincipalArbitro.this, Arbitro.class);
-                Bundle b = new Bundle();
-                b.putInt("id", 0);
-                intent.putExtras(b);
+
                 startActivity(intent);
             }
         });
@@ -71,9 +61,6 @@ public class MenuPrincipalArbitro extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent (MenuPrincipalArbitro.this, Informes.class);
-                Bundle b = new Bundle();
-                b.putInt("id", 0);
-                intent.putExtras(b);
                 startActivity(intent);
             }
         });

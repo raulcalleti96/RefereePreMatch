@@ -29,17 +29,17 @@ public class InfoEstadio extends AppCompatActivity {
         id = b.getString("id");
         db = FirebaseFirestore.getInstance();
         botonVolver = findViewById(R.id.volverbtnestadio);
-        nombre = findViewById(R.id.nombrestadiotv);
-        aforo = findViewById(R.id.aforotv);
-        superficie = findViewById(R.id.superficietv);
-        direccion = findViewById(R.id.direcciontv);
-        ciudad = findViewById(R.id.ciudadtv);
-        localidad = findViewById(R.id.localidadtv);
+        nombre = findViewById(R.id.partidotv);
+        aforo = findViewById(R.id.pagoArbitro);
+        superficie = findViewById(R.id.pagoA1);
+        direccion = findViewById(R.id.pagoA2);
+        ciudad = findViewById(R.id.pagoRFEF);
+        localidad = findViewById(R.id.pagoTotal);
         imagenEstadio = findViewById(R.id.imagenestadio);
-        rellenaDatos();
+        rellenaDatosEstadio();
     }
 
-    public void rellenaDatos() {
+    public void rellenaDatosEstadio() {
 
         db.collection("Estadios").document(id).get().addOnCompleteListener(task1 -> {
             if (task1.isSuccessful()) {

@@ -31,9 +31,6 @@ public class MenuPrincipalDelegado extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent (MenuPrincipalDelegado.this, Ajustes.class);
-                Bundle b = new Bundle();
-                b.putInt("id", 1);
-                intent.putExtras(b);
                 startActivity(intent);
             }
         });
@@ -43,9 +40,6 @@ public class MenuPrincipalDelegado extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent (MenuPrincipalDelegado.this, Arbitros.class);
-                Bundle b = new Bundle();
-                b.putInt("id", 1);
-                intent.putExtras(b);
                 startActivity(intent);
             }
         });
@@ -55,9 +49,6 @@ public class MenuPrincipalDelegado extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent (MenuPrincipalDelegado.this, Estadios.class);
-                Bundle b = new Bundle();
-                b.putInt("id", 1);
-                intent.putExtras(b);
                 startActivity(intent);
             }
         });
@@ -67,9 +58,6 @@ public class MenuPrincipalDelegado extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent (MenuPrincipalDelegado.this, Partidos.class);
-                Bundle b = new Bundle();
-                b.putInt("id", 1);
-                intent.putExtras(b);
                 startActivity(intent);
             }
         });
@@ -79,9 +67,6 @@ public class MenuPrincipalDelegado extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent (MenuPrincipalDelegado.this, Recibos.class);
-                Bundle b = new Bundle();
-                b.putInt("id", 1);
-                intent.putExtras(b);
                 startActivity(intent);
             }
         });
@@ -106,30 +91,21 @@ public class MenuPrincipalDelegado extends AppCompatActivity {
                         if(mSpinner.getSelectedItem().toString().equalsIgnoreCase("Arbitro")){
 
                             Intent intent = new Intent (MenuPrincipalDelegado.this, NuevoContacto.class);
-                            Bundle b = new Bundle();
-                            b.putInt("id", 1);
-                            intent.putExtras(b);
                             startActivity(intent);
 
                         }else if(mSpinner.getSelectedItem().toString().equalsIgnoreCase("Estadio")){
                             Intent intent = new Intent (MenuPrincipalDelegado.this, NuevoEstadio.class);
-                            Bundle b = new Bundle();
-                            b.putInt("id", 1);
-                            intent.putExtras(b);
+
                             startActivity(intent);
 
                         }else if(mSpinner.getSelectedItem().toString().equalsIgnoreCase("Recibo")){
                             Intent intent = new Intent (MenuPrincipalDelegado.this, NuevoRecibo.class);
-                            Bundle b = new Bundle();
-                            b.putInt("id", 1);
-                            intent.putExtras(b);
+
                             startActivity(intent);
 
                         }else if(mSpinner.getSelectedItem().toString().equalsIgnoreCase("Partido")){
                             Intent intent = new Intent (MenuPrincipalDelegado.this, NuevoPartido.class);
-                            Bundle b = new Bundle();
-                            b.putInt("id", 1);
-                            intent.putExtras(b);
+
                             startActivity(intent);
 
                         }

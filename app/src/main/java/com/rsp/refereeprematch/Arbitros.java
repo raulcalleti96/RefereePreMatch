@@ -25,13 +25,11 @@ public class Arbitros extends AppCompatActivity {
     //Android
     public ListView listView;
     private ArrayList<Arbitro> arrayList = new ArrayList<Arbitro>();
-    int id;
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.arbitros);
-        Bundle b = getIntent().getExtras();
-        id = b.getInt("id");
         db = FirebaseFirestore.getInstance();
         listView =  (ListView) findViewById(R.id.listadoView);
         loadDatainListview();
@@ -54,7 +52,7 @@ public class Arbitros extends AppCompatActivity {
                                 arrayList.add(users);
                             }
 
-                            ArbitrosAdapter arbitrosAdapter = new ArbitrosAdapter(Arbitros.this, arrayList, id);
+                            ArbitrosAdapter arbitrosAdapter = new ArbitrosAdapter(Arbitros.this, arrayList);
 
                             listView.setAdapter(arbitrosAdapter);
                         } else {

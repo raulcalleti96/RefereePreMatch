@@ -21,7 +21,7 @@ public class Partidos extends AppCompatActivity {
 
     //Firebase
     public FirebaseFirestore db;
-
+    int id;
     //Android
     public ListView listView;
     private ArrayList<Partido> arrayList = new ArrayList<>();
@@ -29,6 +29,8 @@ public class Partidos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.partidos);
+        Bundle b = getIntent().getExtras();
+        id = b.getInt("id");
         db = FirebaseFirestore.getInstance();
         listView =  (ListView) findViewById(R.id.listadoView);
         loadDatainListview();
@@ -57,7 +59,7 @@ public class Partidos extends AppCompatActivity {
                                 arrayList.add(partido);
                             }
                             // after that we are passing our array list to our adapter class.
-                            PartidosAdapter partidosAdapter = new PartidosAdapter(Partidos.this, arrayList);
+                            PartidosAdapter partidosAdapter = new PartidosAdapter(Partidos.this, arrayList,id);
 
                             // after passing this array list to our adapter
                             // class we are setting our adapter to our list view.

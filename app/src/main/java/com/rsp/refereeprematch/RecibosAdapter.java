@@ -1,6 +1,9 @@
 package com.rsp.refereeprematch;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +15,12 @@ import java.util.List;
 
 public class RecibosAdapter extends ArrayAdapter<Recibo> {
 
-    public RecibosAdapter(Context context, List<Recibo> object) {
+    int idrecibo;
+    public RecibosAdapter(Context context, List<Recibo> object,int idrecibo) {
 
         super(context, 0, object);
+        this.idrecibo = idrecibo;
+
     }
 
 
@@ -39,7 +45,7 @@ public class RecibosAdapter extends ArrayAdapter<Recibo> {
         // after initializing our items we are
         // setting data to our view.
         // below line is use to set data to our text view.
-        String recibot = new Double(recibo.getPagoTotal()).toString();
+        String recibot = recibo.getPagoTotal();
         reciboText.setText(recibot);
 
         // below line is use to add item click listener
@@ -49,7 +55,12 @@ public class RecibosAdapter extends ArrayAdapter<Recibo> {
             public void onClick(View v) {
                 // on the item click on our list view.
                 // we are displaying a toast message.
-                Toast.makeText(getContext(), "Item clicked is : " + recibo.getPagoTotal(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent (getContext(), InfoRecibo.class);
+                Bundle b = new Bundle();
+                b.putInt("id", idrecibo);
+                b.putString("nombre", recibo.getNombre());
+                intent.putExtras(b);
+                getContext().startActivity(intent);
             }
         });
         return listitemView;

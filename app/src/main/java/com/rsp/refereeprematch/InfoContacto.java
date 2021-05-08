@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,7 +17,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -27,16 +27,14 @@ public class InfoContacto extends AppCompatActivity {
     Button botonVolver;
     FirebaseFirestore db;
     String email;
-    int id;
     TextView nombre, apellidos, telefono, fechanacimiento, dni, categoria, clave;
-    ImageView volver;
+    CheckBox delegado, arbi;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.infocontacto);
         Bundle b = getIntent().getExtras();
-        id = b.getInt("id");
         email = b.getString("email");
-        botonEliminar = findViewById(R.id.eliminarbtn);
+        botonEliminar = findViewById(R.id.eliminarbtnRecibos);
         botonVolver = findViewById(R.id.volverbtn);
         db = FirebaseFirestore.getInstance();
         nombre = findViewById(R.id.nombrept);
@@ -46,14 +44,15 @@ public class InfoContacto extends AppCompatActivity {
         dni = findViewById(R.id.dnipt);
         categoria = findViewById(R.id.categoriapt);
         clave = findViewById(R.id.clavepass);
+        delegado = findViewById(R.id.delegadocb);
+        arbi = findViewById(R.id.arbitrocb);
 
-        /*
-        if(id == 0) {
+        if(Constantes.IDUSUARIO == 0) {
             botonEliminar.setVisibility(View.GONE);
         }else{
             botonEliminar.setVisibility(View.VISIBLE);
         }
-        */
+
 
 
         rellenaDatos();
@@ -74,6 +73,13 @@ public class InfoContacto extends AppCompatActivity {
                     fechanacimiento.setText((String) document.get("FechaNacimiento"));
                     dni.setText((String) document.get("DNI"));
                     categoria.setText((String) document.get("Categoria"));
+
+
+                    if((boolean) document.get("delegado")){
+                        delegado.setChecked(true);
+                    }else if((boolean) document.get("arbitro")){
+                        arbi.setChecked(true);
+                    }
 
                 } else {
 
@@ -119,7 +125,7 @@ public class InfoContacto extends AppCompatActivity {
                                         .addOnFailureListener(new OnFailureListener() {
                                             @Override
                                             public void onFailure(@NonNull Exception e) {
-                                                Toast.makeText(InfoContacto.this, "No se ha podido eliminar el usuario. " + e, Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(InfoContacto.this, "No se ha podido eliminar el usuario." + e, Toast.LENGTH_SHORT).show();
                                             }
                                         });
 
@@ -140,8 +146,6 @@ public class InfoContacto extends AppCompatActivity {
             }
 
         });
-
-
 
     }
 

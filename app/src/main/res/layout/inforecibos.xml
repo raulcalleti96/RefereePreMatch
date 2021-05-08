@@ -13,11 +13,11 @@
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="69dp"
         android:layout_marginRight="69dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginBottom="21dp"
         android:text="PAGO TOTAL"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/eliminarbtn"
-        app:layout_constraintEnd_toStartOf="@+id/localidadtv"
+        app:layout_constraintBottom_toTopOf="@+id/eliminarbtnRecibos"
+        app:layout_constraintEnd_toStartOf="@+id/pagoTotal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
@@ -33,9 +33,9 @@
         android:text="ASISTENTE 1"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView20"
-        app:layout_constraintEnd_toStartOf="@+id/superficietv"
+        app:layout_constraintEnd_toStartOf="@+id/pagoA1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/pagoArbitro" />
 
     <TextView
         android:id="@+id/textView20"
@@ -45,69 +45,63 @@
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="69dp"
         android:layout_marginRight="69dp"
-        android:layout_marginBottom="31dp"
+        android:layout_marginBottom="30dp"
         android:text="ASISTENTE 2"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView21"
-        app:layout_constraintEnd_toStartOf="@+id/direcciontv"
+        app:layout_constraintEnd_toStartOf="@+id/pagoA2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <TextView
         android:id="@+id/textView21"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="88dp"
+        android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="71dp"
         android:layout_marginRight="71dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="32dp"
         android:text="PAGO RFEF"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView22"
-        app:layout_constraintEnd_toStartOf="@+id/ciudadtv"
+        app:layout_constraintEnd_toStartOf="@+id/pagoRFEF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <ImageView
         android:id="@+id/imagenestadio"
-        android:layout_width="420dp"
-        android:layout_height="282dp"
+        android:layout_width="392dp"
+        android:layout_height="221dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:foregroundGravity="center"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/nombrestadiotv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/partidotv"
+        app:layout_constraintStart_toStartOf="@+id/partidotv"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.941"
         tools:srcCompat="@drawable/fondorfef" />
 
-    <ImageView
-        android:id="@+id/volverimg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/volveroro" />
-
     <TextView
-        android:id="@+id/nombrestadiotv"
-        android:layout_width="0dp"
+        android:id="@+id/partidotv"
+        android:layout_width="411dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="408dp"
+        android:layout_marginBottom="449dp"
         android:fontFamily="serif"
+        android:gravity="center_horizontal"
         android:text="Partido"
+        android:textAllCaps="true"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volverbtnRecibo" />
 
     <Button
-        android:id="@+id/eliminarbtn"
+        android:id="@+id/eliminarbtnRecibos"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="11dp"
@@ -126,90 +120,103 @@
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
     <EditText
-        android:id="@+id/aforotv"
+        android:id="@+id/pagoArbitro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginRight="29dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/partidotv" />
+
+    <EditText
+        android:id="@+id/pagoRFEF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/nombrestadiotv" />
+        app:layout_constraintStart_toEndOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/pagoA2" />
 
     <EditText
-        android:id="@+id/ciudadtv"
+        android:id="@+id/pagoTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/eliminarbtnRecibos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView22" />
+
+    <EditText
+        android:id="@+id/pagoA2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="27dp"
         android:layout_marginRight="27dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/direcciontv" />
-
-    <EditText
-        android:id="@+id/localidadtv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginRight="29dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/ciudadtv" />
-
-    <EditText
-        android:id="@+id/direcciontv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginRight="29dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView20"
-        app:layout_constraintTop_toBottomOf="@+id/superficietv" />
+        app:layout_constraintTop_toBottomOf="@+id/pagoA1" />
 
     <EditText
-        android:id="@+id/superficietv"
+        android:id="@+id/pagoA1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginRight="29dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/aforotv" />
+        app:layout_constraintTop_toBottomOf="@+id/pagoArbitro" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginRight="69dp"
-        android:layout_marginBottom="30dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
         android:text="ÁRBITRO"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
-        app:layout_constraintEnd_toStartOf="@+id/aforotv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pagoArbitro"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombrestadiotv" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.426" />
+
+    <Button
+        android:id="@+id/volverbtnRecibo"
+        android:layout_width="58dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="178dp"
+        android:background="@drawable/volveroro"
+        app:layout_constraintBottom_toTopOf="@+id/partidotv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

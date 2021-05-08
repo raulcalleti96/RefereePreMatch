@@ -22,8 +22,7 @@ public class Ajustes extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ajustes);
-        Bundle b = getIntent().getExtras();
-        int id = b.getInt("id");
+
 
 
         Spinner dropdown = findViewById(R.id.spinner1);
@@ -42,7 +41,7 @@ public class Ajustes extends AppCompatActivity
             @Override
             public void onClick(View view) {
 
-                if(id == 0) {
+                if(Constantes.IDUSUARIO  == 0) {
                     Intent intent = new Intent(Ajustes.this, MenuPrincipalArbitro.class);
                     startActivity(intent);
                 }else{

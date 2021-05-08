@@ -1,6 +1,8 @@
 package com.rsp.refereeprematch;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +14,11 @@ import java.util.List;
 
 public class PartidosAdapter extends ArrayAdapter<Partido> {
 
-    public PartidosAdapter(Context context, List<Partido> object) {
+    int idPartidos;
+    public PartidosAdapter(Context context, List<Partido> object, int idPartidos) {
 
         super(context, 0, object);
+        this.idPartidos = idPartidos;
     }
 
 
@@ -46,9 +50,13 @@ public class PartidosAdapter extends ArrayAdapter<Partido> {
         listitemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // on the item click on our list view.
-                // we are displaying a toast message.
-                Toast.makeText(getContext(), "Item clicked is : " + partido.getNombre(), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent (getContext(), InfoPartido.class);
+                Bundle b = new Bundle();
+                b.putString("nombre", partido.getNombre());
+                b.putInt("id", idPartidos);
+                intent.putExtras(b);
+                getContext().startActivity(intent);
             }
         });
         return listitemView;

@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/editTextTextPersonName9"
+        android:id="@+id/asistente2tv"
         android:layout_width="0dp"
         android:layout_height="39dp"
         android:layout_marginEnd="121dp"
@@ -31,7 +31,7 @@
         android:layout_marginBottom="33dp"
         android:text="Asistente 1"
         app:layout_constraintBottom_toTopOf="@+id/textView19"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName7"
+        app:layout_constraintEnd_toStartOf="@+id/asistente1tv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -45,13 +45,13 @@
         android:layout_marginRight="19dp"
         android:layout_marginBottom="53dp"
         android:text="Asistente 2"
-        app:layout_constraintBottom_toTopOf="@+id/eliminarbtn"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName9"
+        app:layout_constraintBottom_toTopOf="@+id/eliminarbtnRecibos"
+        app:layout_constraintEnd_toStartOf="@+id/asistente2tv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/arbitrotv"
         android:layout_width="0dp"
         android:layout_height="32dp"
         android:layout_marginTop="80dp"
@@ -66,10 +66,10 @@
         app:layout_constraintBottom_toTopOf="@+id/textView19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toBottomOf="@+id/fechanacimientotv" />
+        app:layout_constraintTop_toBottomOf="@+id/competiciontv" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/asistente1tv"
         android:layout_width="0dp"
         android:layout_height="32dp"
         android:layout_marginTop="106dp"
@@ -81,13 +81,13 @@
         android:text="Name"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/eliminarbtn"
+        app:layout_constraintBottom_toTopOf="@+id/eliminarbtnRecibos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView18"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toTopOf="@+id/recibotv" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/recibotv"
         android:layout_width="145dp"
         android:layout_height="40dp"
         android:layout_marginEnd="18dp"
@@ -100,11 +100,11 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView17"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName5"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintStart_toEndOf="@+id/estadiotv"
+        app:layout_constraintTop_toBottomOf="@+id/fechatv" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/estadiotv"
         android:layout_width="170dp"
         android:layout_height="37dp"
         android:layout_marginStart="24dp"
@@ -116,37 +116,24 @@
         android:text="Estadio"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName4"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName4"
+        app:layout_constraintBottom_toBottomOf="@+id/recibotv"
+        app:layout_constraintEnd_toStartOf="@+id/recibotv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toTopOf="@+id/recibotv" />
 
     <ImageView
         android:id="@+id/imagenestadio"
         android:layout_width="411dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/nombrestadiotv"
+        app:layout_constraintBottom_toTopOf="@+id/partidotv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/fondorfef" />
 
-    <ImageView
-        android:id="@+id/volverimg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="224dp"
-        app:layout_constraintBottom_toTopOf="@+id/nombrestadiotv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/volveroro" />
-
     <TextView
-        android:id="@+id/nombrestadiotv"
+        android:id="@+id/partidotv"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="408dp"
@@ -157,15 +144,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/volverimg" />
+        app:layout_constraintTop_toBottomOf="@+id/volverbtnpartido" />
 
     <EditText
-        android:id="@+id/telefonotv"
+        android:id="@+id/equipolocaltv"
         android:layout_width="155dp"
         android:layout_height="38dp"
         android:layout_marginStart="11dp"
         android:layout_marginLeft="11dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:editable="false"
@@ -174,11 +161,9 @@
         android:text="Equipo local"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/dnitv"
         app:layout_constraintEnd_toStartOf="@+id/textView16"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombrestadiotv"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/partidotv" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -187,10 +172,10 @@
         android:orientation="horizontal" />
 
     <EditText
-        android:id="@+id/dnitv"
+        android:id="@+id/equipovisitantetv"
         android:layout_width="152dp"
         android:layout_height="37dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:editable="false"
@@ -201,12 +186,12 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/nombrestadiotv" />
+        app:layout_constraintTop_toBottomOf="@+id/partidotv" />
 
     <Button
-        android:id="@+id/eliminarbtn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/eliminarbtnRecibos"
+        android:layout_width="391dp"
+        android:layout_height="46dp"
         android:layout_marginStart="11dp"
         android:layout_marginLeft="11dp"
         android:layout_marginEnd="11dp"
@@ -223,7 +208,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <EditText
-        android:id="@+id/fechanacimientotv"
+        android:id="@+id/competiciontv"
         android:layout_width="152dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
@@ -238,8 +223,8 @@
         android:text="Competicion"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName5"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName3"
+        app:layout_constraintBottom_toBottomOf="@+id/estadiotv"
+        app:layout_constraintEnd_toStartOf="@+id/fechatv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView16" />
 
@@ -247,20 +232,17 @@
         android:id="@+id/textView16"
         android:layout_width="31dp"
         android:layout_height="29dp"
-        android:layout_marginTop="51dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="53dp"
         android:text="/"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName3"
-        app:layout_constraintEnd_toStartOf="@+id/dnitv"
-        app:layout_constraintStart_toEndOf="@+id/telefonotv"
-        app:layout_constraintTop_toTopOf="@+id/nombrestadiotv"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toStartOf="@+id/equipovisitantetv"
+        app:layout_constraintStart_toEndOf="@+id/equipolocaltv"
+        app:layout_constraintTop_toTopOf="@+id/partidotv" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/fechatv"
         android:layout_width="138dp"
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
@@ -272,10 +254,10 @@
         android:text="Fecha"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
+        app:layout_constraintBottom_toTopOf="@+id/recibotv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/fechanacimientotv"
-        app:layout_constraintTop_toBottomOf="@+id/dnitv" />
+        app:layout_constraintStart_toEndOf="@+id/competiciontv"
+        app:layout_constraintTop_toBottomOf="@+id/equipovisitantetv" />
 
     <TextView
         android:id="@+id/textView17"
@@ -288,8 +270,21 @@
         android:layout_marginBottom="36dp"
         android:text="Árbitro"
         app:layout_constraintBottom_toTopOf="@+id/textView18"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName6"
+        app:layout_constraintEnd_toStartOf="@+id/arbitrotv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/recibotv" />
+
+    <Button
+        android:id="@+id/volverbtnpartido"
+        android:layout_width="57dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="269dp"
+        android:background="@drawable/volveroro"
+        app:layout_constraintBottom_toTopOf="@+id/partidotv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

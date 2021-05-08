@@ -61,9 +61,11 @@ public class Login extends AppCompatActivity {
 
                                         Intent intent;
                                         if(arbitro){
+                                            Constantes.IDUSUARIO = 0;
                                             intent = new Intent(Login.this, MenuPrincipalArbitro.class);
 
                                         }else{
+                                            Constantes.IDUSUARIO = 1;
                                             intent = new Intent(Login.this, MenuPrincipalDelegado.class);
 
                                         }
