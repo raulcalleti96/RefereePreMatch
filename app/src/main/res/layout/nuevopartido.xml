@@ -5,68 +5,72 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/botonvolvernuevopartido2"
+        android:layout_width="39dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="360dp"
+        android:layout_marginRight="360dp"
+        android:background="@drawable/volveroro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Spinner
-        android:id="@+id/spinner7"
-        android:layout_width="0dp"
+        android:id="@+id/spinnerA2"
+        android:layout_width="161dp"
         android:layout_height="38dp"
+        android:layout_marginTop="23dp"
         android:layout_marginEnd="124dp"
         android:layout_marginRight="124dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView19"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView19"
-        app:layout_constraintTop_toTopOf="@+id/textView19" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerA1" />
 
     <Spinner
         android:id="@+id/spinnerA1"
-        android:layout_width="0dp"
+        android:layout_width="161dp"
         android:layout_height="38dp"
+        android:layout_marginTop="22dp"
         android:layout_marginEnd="124dp"
         android:layout_marginRight="124dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView18"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView18"
-        app:layout_constraintTop_toTopOf="@+id/textView18" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerA" />
 
     <Spinner
         android:id="@+id/spinnerA"
-        android:layout_width="0dp"
+        android:layout_width="161dp"
         android:layout_height="38dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="124dp"
         android:layout_marginRight="124dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView17"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toTopOf="@+id/textView17" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEstadio" />
 
     <Spinner
         android:id="@+id/spinnerEstadio"
-        android:layout_width="0dp"
+        android:layout_width="153dp"
         android:layout_height="38dp"
         android:layout_marginStart="18dp"
         android:layout_marginLeft="18dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="73dp"
         android:layout_marginRight="73dp"
-        android:layout_marginBottom="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/spinnerA"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/recibotv"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/competiciontv"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/competiciontv" />
 
     <Spinner
         android:id="@+id/spinnerVisitante"
-        android:layout_width="152dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginRight="3dp"
-        app:layout_constraintBottom_toTopOf="@+id/fechatv"
+        android:layout_width="145dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView16"
         app:layout_constraintTop_toBottomOf="@+id/partidotv" />
 
     <TextView
@@ -75,11 +79,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
+        android:layout_marginTop="41dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="41dp"
         android:text="Asistente 1"
-        app:layout_constraintBottom_toTopOf="@+id/textView19"
         app:layout_constraintEnd_toStartOf="@+id/spinnerA1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
@@ -90,84 +93,66 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
+        android:layout_marginTop="42dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="35dp"
         android:text="Asistente 2"
-        app:layout_constraintBottom_toTopOf="@+id/eliminarbtnRecibos"
-        app:layout_constraintEnd_toStartOf="@+id/spinner7"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerA2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <EditText
         android:id="@+id/recibotv"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginRight="14dp"
-        android:layout_marginBottom="37dp"
+        android:layout_width="153dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
         android:editable="true"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Recibo"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView17"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/spinnerEstadio"
         app:layout_constraintTop_toBottomOf="@+id/fechatv" />
 
     <ImageView
         android:id="@+id/imagenestadio"
-        android:layout_width="408dp"
-        android:layout_height="231dp"
+        android:layout_width="410dp"
+        android:layout_height="202dp"
+        android:layout_marginBottom="17dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/partidotv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.072"
         tools:srcCompat="@drawable/fondorfef" />
-
-    <ImageView
-        android:id="@+id/volverimg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="7dp"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="224dp"
-        app:layout_constraintBottom_toTopOf="@+id/partidotv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/volveroro" />
 
     <TextView
         android:id="@+id/partidotv"
-        android:layout_width="411dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="408dp"
+        android:layout_width="416dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="17dp"
         android:editable="true"
         android:fontFamily="serif"
-        android:text="Partido"
+        android:gravity="center_horizontal"
+        android:text="Nuevo partido"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagenestadio" />
 
     <Button
-        android:id="@+id/eliminarbtnRecibos"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/guardarnuevopartido"
+        android:layout_width="389dp"
+        android:layout_height="46dp"
         android:layout_marginStart="11dp"
         android:layout_marginLeft="11dp"
         android:layout_marginEnd="11dp"
         android:layout_marginRight="11dp"
-        android:layout_marginBottom="1dp"
         android:background="@android:color/holo_green_dark"
         android:text="GUARDAR"
         android:textColor="#FFFFFF"
@@ -175,61 +160,54 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/competiciontv"
-        android:layout_width="0dp"
-        android:layout_height="42dp"
+        android:layout_width="155dp"
+        android:layout_height="35dp"
         android:layout_marginStart="19dp"
         android:layout_marginLeft="19dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="51dp"
         android:layout_marginEnd="74dp"
         android:layout_marginRight="74dp"
-        android:layout_marginBottom="16dp"
         android:editable="true"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Competicion"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/recibotv"
         app:layout_constraintEnd_toStartOf="@+id/fechatv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerLocal"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerLocal" />
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="25dp"
-        android:layout_height="34dp"
+        android:layout_width="45dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
         android:text="/"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.453" />
+        app:layout_constraintStart_toEndOf="@+id/spinnerLocal"
+        app:layout_constraintTop_toBottomOf="@+id/partidotv" />
 
     <EditText
         android:id="@+id/fechatv"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginBottom="21dp"
+        android:layout_width="135dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:editable="true"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Fecha"
         android:textSize="12sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/recibotv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/competiciontv"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerVisitante" />
 
     <TextView
         android:id="@+id/textView17"
@@ -237,28 +215,25 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginLeft="44dp"
+        android:layout_marginTop="34dp"
         android:layout_marginEnd="39dp"
         android:layout_marginRight="39dp"
-        android:layout_marginBottom="40dp"
         android:text="Árbitro"
-        app:layout_constraintBottom_toTopOf="@+id/textView18"
         app:layout_constraintEnd_toStartOf="@+id/spinnerA"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recibotv" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEstadio" />
 
     <Spinner
         android:id="@+id/spinnerLocal"
-        android:layout_width="118dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/spinnerVisitante"
+        android:layout_width="166dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
         app:layout_constraintEnd_toStartOf="@+id/textView16"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView16"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/partidotv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

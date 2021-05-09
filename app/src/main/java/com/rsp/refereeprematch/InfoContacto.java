@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,18 +33,18 @@ public class InfoContacto extends AppCompatActivity {
         setContentView(R.layout.infocontacto);
         Bundle b = getIntent().getExtras();
         email = b.getString("email");
-        botonEliminar = findViewById(R.id.eliminarbtnRecibos);
+        botonEliminar = findViewById(R.id.guardarnuevocontacto);
         botonVolver = findViewById(R.id.volverbtn);
         db = FirebaseFirestore.getInstance();
         nombre = findViewById(R.id.nombrept);
         apellidos = findViewById(R.id.apellidospt);
-        telefono = findViewById(R.id.telefonophone);
+        telefono = findViewById(R.id.telefononuevotv);
         fechanacimiento = findViewById(R.id.nacimientopt);
         dni = findViewById(R.id.dnipt);
         categoria = findViewById(R.id.categoriapt);
-        clave = findViewById(R.id.clavepass);
-        delegado = findViewById(R.id.delegadocb);
-        arbi = findViewById(R.id.arbitrocb);
+        clave = findViewById(R.id.clavenuevotv);
+        delegado = findViewById(R.id.delegadonuevocb);
+        arbi = findViewById(R.id.arbitronuevocb);
 
         if(Constantes.IDUSUARIO == 0) {
             botonEliminar.setVisibility(View.GONE);
@@ -119,6 +118,7 @@ public class InfoContacto extends AppCompatActivity {
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void aVoid) {
+
                                                 Toast.makeText(InfoContacto.this, "Usuario eliminado correctamente", Toast.LENGTH_SHORT).show();
                                             }
                                         })

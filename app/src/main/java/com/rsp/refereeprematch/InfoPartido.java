@@ -34,8 +34,8 @@ public class InfoPartido extends AppCompatActivity {
         id = b.getInt("id");
         db = FirebaseFirestore.getInstance();
         botonVolver = findViewById(R.id.volverbtnpartido);
-        botoneliminar = findViewById(R.id.eliminarbtnRecibos);
-        local = findViewById(R.id.equipolocaltv);
+        botoneliminar = findViewById(R.id.guardarnuevocontacto);
+        local = findViewById(R.id.apellidosnuevotv);
         visitante = findViewById(R.id.equipovisitantetv);
         competicion = findViewById(R.id.competiciontv);
         fecha = findViewById(R.id.fechatv);

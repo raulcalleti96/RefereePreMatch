@@ -32,7 +32,7 @@
         android:editable="false"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="@+id/telefonophone"
+        app:layout_constraintBottom_toBottomOf="@+id/telefononuevotv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView27"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
@@ -96,7 +96,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView30"
-        app:layout_constraintEnd_toStartOf="@+id/telefonophone"
+        app:layout_constraintEnd_toStartOf="@+id/telefononuevotv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
@@ -152,7 +152,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
     <EditText
-        android:id="@+id/telefonophone"
+        android:id="@+id/telefononuevotv"
         android:layout_width="0dp"
         android:layout_height="43dp"
         android:layout_marginTop="70dp"
@@ -168,7 +168,7 @@
         app:layout_constraintTop_toTopOf="@+id/nacimientopt" />
 
     <Button
-        android:id="@+id/eliminarbtnRecibos"
+        android:id="@+id/guardarnuevocontacto"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="11dp"
@@ -194,7 +194,7 @@
         android:layout_marginRight="4dp"
         android:layout_marginBottom="64dp"
         android:text="Árbitro"
-        app:layout_constraintBottom_toTopOf="@+id/eliminarbtnRecibos"
+        app:layout_constraintBottom_toTopOf="@+id/guardarnuevocontacto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/delegadocb"
         app:layout_constraintTop_toBottomOf="@+id/textView30" />
@@ -265,7 +265,7 @@
         android:layout_marginTop="7dp"
         android:layout_marginBottom="611dp"
         android:background="@drawable/volveroro"
-        app:layout_constraintBottom_toTopOf="@+id/eliminarbtnRecibos"
+        app:layout_constraintBottom_toTopOf="@+id/guardarnuevocontacto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -17,7 +17,7 @@
         android:text="LOCALIDAD"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/pagoTotal"
+        app:layout_constraintEnd_toStartOf="@+id/localidadinfoestadio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
@@ -33,7 +33,7 @@
         android:text="SUPERFICIE"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView20"
-        app:layout_constraintEnd_toStartOf="@+id/pagoA1"
+        app:layout_constraintEnd_toStartOf="@+id/superficieinfo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -49,7 +49,7 @@
         android:text="DIRECCIÓN"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView21"
-        app:layout_constraintEnd_toStartOf="@+id/pagoA2"
+        app:layout_constraintEnd_toStartOf="@+id/direccioninfotv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
@@ -65,7 +65,7 @@
         android:text="CIUDAD"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView22"
-        app:layout_constraintEnd_toStartOf="@+id/pagoRFEF"
+        app:layout_constraintEnd_toStartOf="@+id/ciudadinfoestadiotv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
@@ -95,7 +95,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imagenestadio" />
 
     <EditText
-        android:id="@+id/pagoArbitro"
+        android:id="@+id/aforoinfoestadio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -109,7 +109,7 @@
         app:layout_constraintTop_toBottomOf="@+id/partidotv" />
 
     <EditText
-        android:id="@+id/pagoRFEF"
+        android:id="@+id/ciudadinfoestadiotv"
         android:layout_width="wrap_content"
         android:layout_height="45dp"
         android:layout_marginTop="40dp"
@@ -120,10 +120,10 @@
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/pagoA2" />
+        app:layout_constraintTop_toBottomOf="@+id/direccioninfotv" />
 
     <EditText
-        android:id="@+id/pagoTotal"
+        android:id="@+id/localidadinfoestadio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -134,10 +134,10 @@
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/pagoRFEF" />
+        app:layout_constraintTop_toBottomOf="@+id/ciudadinfoestadiotv" />
 
     <EditText
-        android:id="@+id/pagoA2"
+        android:id="@+id/direccioninfotv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -148,10 +148,10 @@
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView20"
-        app:layout_constraintTop_toBottomOf="@+id/pagoA1" />
+        app:layout_constraintTop_toBottomOf="@+id/superficieinfo" />
 
     <EditText
-        android:id="@+id/pagoA1"
+        android:id="@+id/superficieinfo"
         android:layout_width="225dp"
         android:layout_height="57dp"
         android:layout_marginTop="32dp"
@@ -162,7 +162,7 @@
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/pagoArbitro" />
+        app:layout_constraintTop_toBottomOf="@+id/aforoinfoestadio" />
 
     <TextView
         android:id="@+id/textView12"
@@ -176,7 +176,7 @@
         android:text="AFORO"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView15"
-        app:layout_constraintEnd_toStartOf="@+id/pagoArbitro"
+        app:layout_constraintEnd_toStartOf="@+id/aforoinfoestadio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/partidotv" />
 

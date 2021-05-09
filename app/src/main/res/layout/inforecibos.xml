@@ -16,7 +16,7 @@
         android:layout_marginBottom="21dp"
         android:text="PAGO TOTAL"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/eliminarbtnRecibos"
+        app:layout_constraintBottom_toTopOf="@+id/guardarnuevocontacto"
         app:layout_constraintEnd_toStartOf="@+id/pagoTotal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
@@ -101,7 +101,7 @@
         app:layout_constraintTop_toBottomOf="@+id/volverbtnRecibo" />
 
     <Button
-        android:id="@+id/eliminarbtnRecibos"
+        android:id="@+id/guardarnuevocontacto"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="11dp"
@@ -158,7 +158,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/eliminarbtnRecibos"
+        app:layout_constraintBottom_toTopOf="@+id/guardarnuevocontacto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView22" />
 

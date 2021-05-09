@@ -39,7 +39,7 @@ public class InfoRecibo extends AppCompatActivity {
         pagoA2 = findViewById(R.id.pagoA2);
         pagoArbitro = findViewById(R.id.pagoArbitro);
         partido = findViewById(R.id.partidotv);
-        botoneliminar = findViewById(R.id.eliminarbtnRecibos);
+        botoneliminar = findViewById(R.id.guardarnuevocontacto);
         botonVolver = findViewById(R.id.volverbtnRecibo);
         rellenaDatosEstadio();
 
