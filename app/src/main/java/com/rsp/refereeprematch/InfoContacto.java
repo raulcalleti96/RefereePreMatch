@@ -31,9 +31,7 @@ public class InfoContacto extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.infocontacto);
-        Bundle b = getIntent().getExtras();
-        email = b.getString("email");
-        botonEliminar = findViewById(R.id.guardarnuevocontacto);
+        botonEliminar = findViewById(R.id.eliminarcontacto);
         botonVolver = findViewById(R.id.volverbtn);
         db = FirebaseFirestore.getInstance();
         nombre = findViewById(R.id.nombrept);
@@ -43,61 +41,31 @@ public class InfoContacto extends AppCompatActivity {
         dni = findViewById(R.id.dnipt);
         categoria = findViewById(R.id.categoriapt);
         clave = findViewById(R.id.clavenuevotv);
-        delegado = findViewById(R.id.delegadonuevocb);
-        arbi = findViewById(R.id.arbitronuevocb);
+        delegado = findViewById(R.id.delegadocb);
+        arbi = findViewById(R.id.arbitrocb);
 
         if(Constantes.IDUSUARIO == 0) {
             botonEliminar.setVisibility(View.GONE);
+            rellenaDatosArbi();
         }else{
+            Bundle b = getIntent().getExtras();
+            email = b.getString("email");
             botonEliminar.setVisibility(View.VISIBLE);
+            rellenaDatosDelegado();
         }
-
-
-
-        rellenaDatos();
-    }
-
-    public void rellenaDatos(){
-
-        db.collection("users").document(email).get().addOnCompleteListener(task1 -> {
-            if (task1.isSuccessful()) {
-
-                DocumentSnapshot document = task1.getResult();
-
-                if (document.exists()) {
-
-                    nombre.setText((String) document.get("Nombre"));
-                    apellidos.setText((String) document.get("Apellidos"));
-                    telefono.setText((String)document.get("Telefono"));
-                    fechanacimiento.setText((String) document.get("FechaNacimiento"));
-                    dni.setText((String) document.get("DNI"));
-                    categoria.setText((String) document.get("Categoria"));
-
-
-                    if((boolean) document.get("delegado")){
-                        delegado.setChecked(true);
-                    }else if((boolean) document.get("arbitro")){
-                        arbi.setChecked(true);
-                    }
-
-                } else {
-
-                    Log.d("TAG", "No such document");
-                }
-
-            } else {
-                Log.d("TAG", "get failed with ", task1.getException());
-            }
-
-        });
-
 
         botonVolver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                if(Constantes.IDUSUARIO == 0) {
+                    Intent intent = new Intent(InfoContacto.this, MenuPrincipalArbitro.class);
+                    startActivity(intent);
+                }else{
                     Intent intent = new Intent(InfoContacto.this, Arbitros.class);
                     startActivity(intent);
+                }
+
             }
         });
 
@@ -143,6 +111,81 @@ public class InfoContacto extends AppCompatActivity {
                         });
                 AlertDialog alert = builder.create();
                 alert.show();
+            }
+
+        });
+
+
+    }
+
+
+    public void rellenaDatosArbi(){
+
+        db.collection("users").document(Constantes.EMAILUSER).get().addOnCompleteListener(task1 -> {
+            if (task1.isSuccessful()) {
+
+                DocumentSnapshot document = task1.getResult();
+
+                if (document.exists()) {
+
+                    nombre.setText((String) document.get("Nombre"));
+                    apellidos.setText((String) document.get("Apellidos"));
+                    telefono.setText((String)document.get("Telefono"));
+                    fechanacimiento.setText((String) document.get("FechaNacimiento"));
+                    dni.setText((String) document.get("DNI"));
+                    categoria.setText((String) document.get("Categoria"));
+
+
+                    if((boolean) document.get("delegado")){
+                        delegado.setChecked(true);
+                    }else{
+                        arbi.setChecked(true);
+                    }
+
+                } else {
+
+                    Log.d("TAG", "No such document");
+                }
+
+            } else {
+                Log.d("TAG", "get failed with ", task1.getException());
+            }
+
+        });
+    }
+
+
+
+    public void rellenaDatosDelegado(){
+
+        db.collection("users").document(email).get().addOnCompleteListener(task1 -> {
+            if (task1.isSuccessful()) {
+
+                DocumentSnapshot document = task1.getResult();
+
+                if (document.exists()) {
+
+                    nombre.setText((String) document.get("Nombre"));
+                    apellidos.setText((String) document.get("Apellidos"));
+                    telefono.setText((String)document.get("Telefono"));
+                    fechanacimiento.setText((String) document.get("FechaNacimiento"));
+                    dni.setText((String) document.get("DNI"));
+                    categoria.setText((String) document.get("Categoria"));
+
+
+                    if((boolean) document.get("delegado")){
+                        delegado.setChecked(true);
+                    }else if((boolean) document.get("arbitro")){
+                        arbi.setChecked(true);
+                    }
+
+                } else {
+
+                    Log.d("TAG", "No such document");
+                }
+
+            } else {
+                Log.d("TAG", "get failed with ", task1.getException());
             }
 
         });

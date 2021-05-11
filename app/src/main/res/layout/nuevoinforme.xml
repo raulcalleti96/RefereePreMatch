@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/linearLayout">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/volverbtninformei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/volveroro"
+                    tools:layout_conversion_absoluteHeight="43dp"
+                    tools:layout_conversion_absoluteWidth="57dp" />
+
+                <ImageView
+                    android:id="@+id/imagenestadioi"
+                    android:layout_width="312dp"
+                    android:layout_height="136dp"
+                    android:scaleType="centerCrop"
+                    tools:layout_conversion_absoluteHeight="309dp"
+                    tools:layout_conversion_absoluteWidth="408dp"
+                    tools:srcCompat="@drawable/fondorfef" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/partidotvi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:text="Partido Jornada"
+                    android:textColor="#D33B3B"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:layout_conversion_absoluteHeight="0dp"
+                    tools:layout_conversion_absoluteWidth="0dp" />
+
+                <EditText
+                    android:id="@+id/jornadainformenuvo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center_horizontal"
+                    android:inputType="textPersonName"
+                    android:text="jornada" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <Spinner
+                    android:id="@+id/spinLocali"
+                    android:layout_width="426dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textSize="36sp"
+                    tools:layout_conversion_absoluteHeight="29dp"
+                    tools:layout_conversion_absoluteWidth="31dp" />
+
+                <Spinner
+                    android:id="@+id/spinvisitantei"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/datospartidotvi4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="serif"
+                    android:gravity="center_horizontal"
+                    android:text="Datos del partido"
+                    android:textColor="#D33B3B"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:layout_conversion_absoluteHeight="0dp"
+                    tools:layout_conversion_absoluteWidth="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/fechatvin"
+                    android:layout_width="208dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center_horizontal"
+                    android:inputType="textPersonName"
+                    android:text="Fecha"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:layout_conversion_absoluteHeight="44dp"
+                    tools:layout_conversion_absoluteWidth="138dp" />
+
+                <Spinner
+                    android:id="@+id/spinestadioi"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/recibotvin"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center_horizontal"
+                    android:inputType="textPersonName"
+                    android:text="Recibo"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:layout_conversion_absoluteHeight="40dp"
+                    tools:layout_conversion_absoluteWidth="145dp" />
+
+                <EditText
+                    android:id="@+id/competiciontvin"
+                    android:layout_width="204dp"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:ems="10"
+                    android:gravity="center_horizontal"
+                    android:inputType="textPersonName"
+                    android:text="Competicion"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:layout_conversion_absoluteHeight="42dp"
+                    tools:layout_conversion_absoluteWidth="152dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|fill_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="182dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="Árbitro"
+                    android:textColor="#01579B"
+                    android:textStyle="bold|italic"
+                    tools:layout_conversion_absoluteHeight="19dp"
+                    tools:layout_conversion_absoluteWidth="43dp" />
+
+                <Spinner
+                    android:id="@+id/spinarbitroi"
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|fill_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="182dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="Asistente 1"
+                    android:textColor="#01579B"
+                    android:textStyle="bold|italic"
+                    tools:layout_conversion_absoluteHeight="19dp"
+                    tools:layout_conversion_absoluteWidth="70dp" />
+
+                <Spinner
+                    android:id="@+id/spinasis1i"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|fill_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="182dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="Asistente 2"
+                    android:textColor="#01579B"
+                    android:textStyle="bold|italic"
+                    tools:layout_conversion_absoluteHeight="19dp"
+                    tools:layout_conversion_absoluteWidth="70dp" />
+
+                <Spinner
+                    android:id="@+id/spinasis2"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/datostvi3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="serif"
+                    android:gravity="center_horizontal"
+                    android:text="Datos de equipos"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:layout_conversion_absoluteHeight="0dp"
+                    tools:layout_conversion_absoluteWidth="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|fill_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Entrenador local"
+                    android:textColor="#01579B"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/entrenadorlocaln"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|fill_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="163dp"
+                    android:layout_height="33dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Entrenador visitante"
+                    android:textColor="#01579B"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/entrenadorvisitantein"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|fill_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textgoll"
+                    android:layout_width="162dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Goleador local"
+                    android:textColor="#01579B"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/Goleadorlocalin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|fill_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textgolv"
+                    android:layout_width="162dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Goleador visitante"
+                    android:textColor="#01579B"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/GoleadorVisitantein"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|fill_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textConfLocal"
+                    android:layout_width="162dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Conflictivo local"
+                    android:textColor="#01579B"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/ConflictivoLin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|fill_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textConv"
+                    android:layout_width="162dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Conflictivo visitante"
+                    android:textColor="#01579B"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/ConflictivoVin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|fill_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textVid"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Capitán Local"
+                    android:textColor="#01579B"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/CapitanLin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start|fill_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textVifr"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="Capitán visitante"
+                    android:textColor="#01579B"
+                    android:textStyle="bold|italic" />
+
+                <EditText
+                    android:id="@+id/CapitanVin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/guardainformenuevo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#43A047"
+                android:text="Guardar Partido"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:layout_conversion_absoluteHeight="46dp"
+                tools:layout_conversion_absoluteWidth="391dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

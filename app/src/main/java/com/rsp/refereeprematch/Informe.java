@@ -6,7 +6,19 @@ public class Informe {
 
     String Nombre, ArbitroPrincipal, Asistente1, Asistente2, CapitanLocal, CapitanVisitante;
     String EntrenadorLocal, EntrenadorVisitante, EquipoLocal, EquipoVisitante, GoleadorLocal;
-    String GoleadorVisitante, HoraSalida, HoraVuelta, JugadorConflictivoLocal, JugadorConflictivoVisitante, notas;
+    String GoleadorVisitante;
+    String JugadorConflictivoLocal;
+    String JugadorConflictivoVisitante;
+
+    public String getJornada() {
+        return jornada;
+    }
+
+    public void setJornada(String jornada) {
+        this.jornada = jornada;
+    }
+
+    String jornada;
 
     public Informe(){
 
@@ -107,21 +119,6 @@ public class Informe {
         GoleadorVisitante = goleadorVisitante;
     }
 
-    public String getHoraSalida() {
-        return HoraSalida;
-    }
-
-    public void setHoraSalida(String horaSalida) {
-        HoraSalida = horaSalida;
-    }
-
-    public String getHoraVuelta() {
-        return HoraVuelta;
-    }
-
-    public void setHoraVuelta(String horaVuelta) {
-        HoraVuelta = horaVuelta;
-    }
 
     public String getJugadorConflictivoLocal() {
         return JugadorConflictivoLocal;
@@ -139,11 +136,4 @@ public class Informe {
         JugadorConflictivoVisitante = jugadorConflictivoVisitante;
     }
 
-    public String getNotas() {
-        return notas;
-    }
-
-    public void setNotas(String notas) {
-        this.notas = notas;
-    }
 }

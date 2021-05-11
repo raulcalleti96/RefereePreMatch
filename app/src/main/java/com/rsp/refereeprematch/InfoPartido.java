@@ -63,7 +63,7 @@ public class InfoPartido extends AppCompatActivity {
                 if (document.exists()) {
 
                     local.setText((String) document.get("EquipoLocal"));
-                    visitante.setText((String) document.get("EquipoLocal"));
+                    visitante.setText((String) document.get("EquipoVisitante"));
                     competicion.setText((String) document.get("Competicion"));
                     fecha.setText((String) document.get("Fecha"));
                     estadio.setText((String) document.get("Estadio"));

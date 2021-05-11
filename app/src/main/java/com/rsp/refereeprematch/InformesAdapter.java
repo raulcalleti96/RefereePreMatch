@@ -1,6 +1,8 @@
 package com.rsp.refereeprematch;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +51,11 @@ public class InformesAdapter extends ArrayAdapter<Informe> {
             public void onClick(View v) {
                 // on the item click on our list view.
                 // we are displaying a toast message.
-                Toast.makeText(getContext(), "Item clicked is : " + informe.getNombre(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent (getContext(), InfoInforme.class);
+                Bundle b = new Bundle();
+                b.putString("nombre", informe.getNombre());
+                intent.putExtras(b);
+                getContext().startActivity(intent);
             }
         });
         return listitemView;

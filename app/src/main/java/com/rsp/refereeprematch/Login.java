@@ -62,10 +62,12 @@ public class Login extends AppCompatActivity {
                                         Intent intent;
                                         if(arbitro){
                                             Constantes.IDUSUARIO = 0;
+                                            Constantes.EMAILUSER = email.getText().toString();
                                             intent = new Intent(Login.this, MenuPrincipalArbitro.class);
 
                                         }else{
                                             Constantes.IDUSUARIO = 1;
+                                            Constantes.EMAILUSER = email.getText().toString();
                                             intent = new Intent(Login.this, MenuPrincipalDelegado.class);
 
                                         }

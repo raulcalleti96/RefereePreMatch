@@ -30,4 +30,8 @@
         <item>Recibo</item>
         <item>Partido</item>
     </string-array>
+    <string-array name="crearnuevoArbitro">
+        <item>Seleccione el nuevo dato</item>
+        <item>Arbitro</item>
+    </string-array>
 </resources>

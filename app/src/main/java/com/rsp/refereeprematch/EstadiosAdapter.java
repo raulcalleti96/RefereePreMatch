@@ -62,6 +62,7 @@ public class EstadiosAdapter extends ArrayAdapter<Estadio>{
                 b.putString("id", estadio.getId());
                 intent.putExtras(b);
                 getContext().startActivity(intent);
+                
             }
         });
         return listitemView;

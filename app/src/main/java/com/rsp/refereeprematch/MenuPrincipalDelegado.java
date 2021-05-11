@@ -112,7 +112,7 @@ public class MenuPrincipalDelegado extends AppCompatActivity {
                     }
                 });
 
-                mBuilder.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
+                mBuilder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
