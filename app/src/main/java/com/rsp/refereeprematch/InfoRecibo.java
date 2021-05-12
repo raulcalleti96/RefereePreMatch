@@ -44,7 +44,7 @@ public class InfoRecibo extends AppCompatActivity {
         rellenaDatosEstadio();
 
         Log.d("TAG",String.valueOf(id));
-        if(id == 0) {
+        if(Constantes.IDUSUARIO == 0) {
             botoneliminar.setVisibility(View.GONE);
         }else{
             botoneliminar.setVisibility(View.VISIBLE);

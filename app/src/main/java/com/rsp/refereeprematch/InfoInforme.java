@@ -55,7 +55,7 @@ public class InfoInforme extends AppCompatActivity {
         conflictivovisitante = findViewById(R.id.ConflictivoVi);
         rellenaDatosInforme();
 
-        if(id == 0) {
+        if(Constantes.IDUSUARIO == 0) {
             botoneliminar.setVisibility(View.GONE);
         }else{
             botoneliminar.setVisibility(View.VISIBLE);

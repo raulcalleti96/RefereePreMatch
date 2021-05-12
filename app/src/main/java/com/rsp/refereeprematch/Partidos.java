@@ -1,6 +1,8 @@
 package com.rsp.refereeprematch;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -30,7 +32,6 @@ public class Partidos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.partidos);
         Bundle b = getIntent().getExtras();
-        id = b.getInt("id");
         db = FirebaseFirestore.getInstance();
         listView =  (ListView) findViewById(R.id.listadoView);
         loadDatainListview();
@@ -54,12 +55,15 @@ public class Partidos extends AppCompatActivity {
                                 // that list to our object class.
                                 Partido partido = d.toObject(Partido.class);
 
-                                // after getting data from Firebase we are
-                                // storing that data in our array list
-                                arrayList.add(partido);
+
+                                    // after getting data from Firebase we are
+                                    // storing that data in our array list
+                                    arrayList.add(partido);
+
                             }
                             // after that we are passing our array list to our adapter class.
                             PartidosAdapter partidosAdapter = new PartidosAdapter(Partidos.this, arrayList,id);
+
 
                             // after passing this array list to our adapter
                             // class we are setting our adapter to our list view.

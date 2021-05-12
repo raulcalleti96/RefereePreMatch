@@ -7,17 +7,16 @@
     android:baselineAligned="false"
     android:orientation="vertical">
 
-    <SearchView
-        android:layout_width="424dp"
+    <Button
+        android:id="@+id/button"
+        android:layout_width="98dp"
         android:layout_height="wrap_content"
-        android:background="#E18179">
-
-    </SearchView>
+        android:text="Button" />
 
     <ListView
         android:id="@+id/listadoView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     </ListView>
 

@@ -46,7 +46,7 @@ public class InfoPartido extends AppCompatActivity {
         asistente2 = findViewById(R.id.asistente2tv);
         rellenaDatosEstadio();
 
-        if(id == 0) {
+        if(Constantes.IDUSUARIO == 0) {
             botoneliminar.setVisibility(View.GONE);
         }else{
             botoneliminar.setVisibility(View.VISIBLE);
