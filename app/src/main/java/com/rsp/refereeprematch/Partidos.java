@@ -1,8 +1,10 @@
 package com.rsp.refereeprematch;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -27,6 +29,7 @@ public class Partidos extends AppCompatActivity {
     //Android
     public ListView listView;
     private ArrayList<Partido> arrayList = new ArrayList<>();
+    Button volver;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +37,23 @@ public class Partidos extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         db = FirebaseFirestore.getInstance();
         listView =  (ListView) findViewById(R.id.listadoView);
+        volver = findViewById(R.id.btnvolverlistadopartidos);
         loadDatainListview();
+
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(Constantes.IDUSUARIO  == 0) {
+                    Intent intent = new Intent(Partidos.this, MenuPrincipalArbitro.class);
+                    startActivity(intent);
+                }else{
+                    Intent intent = new Intent(Partidos.this, MenuPrincipalDelegado.class);
+                    startActivity(intent);
+                }
+
+            }
+        });
     }
 
     private void loadDatainListview(){

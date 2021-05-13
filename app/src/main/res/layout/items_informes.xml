@@ -1,34 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_margin="4dp"
+    android:background="@drawable/gradiente"
+    android:id="@+id/card_view"
     android:padding="2dp"
-    app:cardElevation="3dp">
+    card_view:cardCornerRadius="20dp"
+    card_view:cardMaxElevation="1dp"
+    card_view:cardElevation="1dp">
 
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="116dp"
+        android:background="@drawable/gradiente"
+        android:orientation="vertical">
 
         <!--Image view for displaying our image-->
 
 
         <!--Text view for displaying our text -->
-        <TextView
-            android:id="@+id/informesText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="40dp"
-            android:padding="3dp"
-            android:text="Category Text"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:layout_marginLeft="10dp"
-            android:gravity="center_horizontal" />
 
-    </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/designadotvi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="INFORME RECIBIDO"
+                    android:textColor="#B61F1F"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/partidoTexti"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Category Text"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:gravity="center_horizontal" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/arbitrodesi"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:foregroundGravity="center"
+                android:gravity="center_horizontal"
+                android:text="Arbitro"
+                android:textColor="#120F0F"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/a1desi"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:foregroundGravity="center"
+                android:gravity="center_horizontal"
+                android:text="Asistente1"
+                android:textColor="#120F0F"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/a2desi"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:foregroundGravity="center"
+                android:gravity="center_horizontal"
+                android:text="Asistente2"
+                android:textColor="#120F0F"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

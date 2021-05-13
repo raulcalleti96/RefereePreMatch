@@ -13,6 +13,44 @@ public class Recibo {
     }
 
     String Nombre;
+
+    public String getEmailArbitro() {
+        return EmailArbitro;
+    }
+
+    public void setEmailArbitro(String emailArbitro) {
+        EmailArbitro = emailArbitro;
+    }
+
+    public String getEmailA1() {
+        return EmailA1;
+    }
+
+    public void setEmailA1(String emailA1) {
+        EmailA1 = emailA1;
+    }
+
+    public String getEmailA2() {
+        return EmailA2;
+    }
+
+    public void setEmailA2(String emailA2) {
+        EmailA2 = emailA2;
+    }
+
+    String EmailArbitro;
+    String EmailA1;
+    String EmailA2;
+
+    public String getPartido() {
+        return Partido;
+    }
+
+    public void setPartido(String partido) {
+        Partido = partido;
+    }
+
+    String Partido;
     String PagoTotal, PagoArbitroPrincipal, PagoAsistente1, PagoAsistente2, PagoRFEF;
 
     public String getPagoTotal() {

@@ -1,7 +1,10 @@
 package com.rsp.refereeprematch;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -26,17 +29,30 @@ public class Recibos extends AppCompatActivity {
     //Android
     public ListView listView;
     private ArrayList<Recibo> arrayList = new ArrayList<>();
-    int id;
+    Button volverrecibo;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recibos);
-        Bundle b = getIntent().getExtras();
-        id = b.getInt("id");
         db = FirebaseFirestore.getInstance();
         listView =  (ListView) findViewById(R.id.listadoView);
+        volverrecibo = findViewById(R.id.btnvolverlistadorecibo);
         loadDatainListview();
 
+        volverrecibo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(Constantes.IDUSUARIO  == 0) {
+                    Intent intent = new Intent(Recibos.this, MenuPrincipalArbitro.class);
+                    startActivity(intent);
+                }else{
+                    Intent intent = new Intent(Recibos.this, MenuPrincipalDelegado.class);
+                    startActivity(intent);
+                }
+
+            }
+        });
     }
 
     private void loadDatainListview(){
@@ -62,7 +78,7 @@ public class Recibos extends AppCompatActivity {
                                 arrayList.add(recibo);
                             }
                             // after that we are passing our array list to our adapter class.
-                            RecibosAdapter recibosAdapter = new RecibosAdapter(Recibos.this, arrayList,id);
+                            RecibosAdapter recibosAdapter = new RecibosAdapter(Recibos.this, arrayList);
 
                             // after passing this array list to our adapter
                             // class we are setting our adapter to our list view.

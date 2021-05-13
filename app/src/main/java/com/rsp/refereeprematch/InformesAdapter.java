@@ -37,26 +37,51 @@ public class InformesAdapter extends ArrayAdapter<Informe> {
         Informe informe = getItem(position);
 
         // initializing our UI components of list view item.
-        TextView informeText = listitemView.findViewById(R.id.informesText);
+        TextView partidotxt = listitemView.findViewById(R.id.partidoTexti);
+        TextView informerecibido = listitemView.findViewById(R.id.designadotvi);
+        TextView arbitxt = listitemView.findViewById(R.id.arbitrodesi);
+        TextView a2txt = listitemView.findViewById(R.id.a2desi);
+        TextView a1txt = listitemView.findViewById(R.id.a1desi);
 
         // after initializing our items we are
         // setting data to our view.
         // below line is use to set data to our text view.
-        informeText.setText(informe.getNombre());
+        partidotxt.setText(informe.getPartido());
+        arbitxt.setText(informe.getArbitroPrincipal());
+        a1txt.setText(informe.getAsistente1());
+        a2txt.setText(informe.getAsistente2());
+
+        if (informe.getEmailArbitroI().equalsIgnoreCase(Constantes.EMAILUSER) || informe.getEmailA1I().equalsIgnoreCase(Constantes.EMAILUSER) || informe.getEmailA2I().equalsIgnoreCase(Constantes.EMAILUSER)) {
+
+                informerecibido.setVisibility(View.VISIBLE);
+
+
+
+        }else{
+            informerecibido.setVisibility(View.GONE);
+        }
 
         // below line is use to add item click listener
         // for our item of list view.
         listitemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // on the item click on our list view.
-                // we are displaying a toast message.
-                Intent intent = new Intent (getContext(), InfoInforme.class);
-                Bundle b = new Bundle();
-                b.putString("nombre", informe.getNombre());
-                intent.putExtras(b);
-                getContext().startActivity(intent);
+
+                    if(informe.getEmailArbitroI().equalsIgnoreCase(Constantes.EMAILUSER) ||informe.getEmailA1I().equalsIgnoreCase(Constantes.EMAILUSER) ||informe.getEmailA2I().equalsIgnoreCase(Constantes.EMAILUSER) ){
+
+                        Intent intent = new Intent (getContext(), InfoInforme.class);
+                        Bundle b = new Bundle();
+                        b.putString("nombre", informe.getNombre());
+                        intent.putExtras(b);
+                        getContext().startActivity(intent);
+
+                    }else{
+
+                        Toast.makeText(getContext(), "Informe no disponible, no puede ver la información", Toast.LENGTH_SHORT).show();
+                    }
+
             }
+
         });
         return listitemView;
     }

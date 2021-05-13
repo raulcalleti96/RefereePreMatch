@@ -15,11 +15,11 @@ import java.util.List;
 
 public class RecibosAdapter extends ArrayAdapter<Recibo> {
 
-    int idrecibo;
-    public RecibosAdapter(Context context, List<Recibo> object,int idrecibo) {
+
+    public RecibosAdapter(Context context, List<Recibo> object) {
 
         super(context, 0, object);
-        this.idrecibo = idrecibo;
+
 
     }
 
@@ -41,27 +41,53 @@ public class RecibosAdapter extends ArrayAdapter<Recibo> {
 
         // initializing our UI components of list view item.
         TextView reciboText = listitemView.findViewById(R.id.reciboText);
+        TextView designado = listitemView.findViewById(R.id.designadotv2);
 
         // after initializing our items we are
         // setting data to our view.
         // below line is use to set data to our text view.
-        String recibot = recibo.getPagoTotal();
+        String recibot = recibo.getPartido();
         reciboText.setText(recibot);
+        if(Constantes.IDUSUARIO == 0) {
+            if(recibo.getEmailArbitro().equalsIgnoreCase(Constantes.EMAILUSER) ||recibo.getEmailA1().equalsIgnoreCase(Constantes.EMAILUSER) ||recibo.getEmailA2().equalsIgnoreCase(Constantes.EMAILUSER) ){
+                designado.setVisibility(View.VISIBLE);
+            }else{
+                designado.setVisibility(View.GONE);
+
+            }
+        }else {
+            designado.setVisibility(View.GONE);
+        }
 
         // below line is use to add item click listener
         // for our item of list view.
         listitemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // on the item click on our list view.
-                // we are displaying a toast message.
-                Intent intent = new Intent (getContext(), InfoRecibo.class);
-                Bundle b = new Bundle();
-                b.putInt("id", idrecibo);
-                b.putString("nombre", recibo.getNombre());
-                intent.putExtras(b);
-                getContext().startActivity(intent);
+                if(Constantes.IDUSUARIO == 0) {
+                    if(recibo.getEmailArbitro().equalsIgnoreCase(Constantes.EMAILUSER) ||recibo.getEmailA1().equalsIgnoreCase(Constantes.EMAILUSER) ||recibo.getEmailA2().equalsIgnoreCase(Constantes.EMAILUSER) ){
+
+                        Intent intent = new Intent (getContext(), InfoRecibo.class);
+                        Bundle b = new Bundle();
+                        b.putString("nombre", recibo.getNombre());
+                        intent.putExtras(b);
+                        getContext().startActivity(intent);
+
+                    }else{
+
+                        Toast.makeText(getContext(), "Recibo no designado, no puede ver la información", Toast.LENGTH_SHORT).show();
+                    }
+                }else {
+                    Intent intent = new Intent (getContext(), InfoRecibo.class);
+                    Bundle b = new Bundle();
+                    b.putString("nombre", recibo.getNombre());
+                    intent.putExtras(b);
+                    getContext().startActivity(intent);
+                }
+
             }
+
+
         });
         return listitemView;
     }

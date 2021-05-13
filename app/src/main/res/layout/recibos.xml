@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <SearchView
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:background="#E18179" />
+    <Button
+        android:id="@+id/btnvolverlistadorecibo"
+        android:layout_width="63dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/volveroro" />
 
     <ListView
         android:id="@+id/listadoView"

@@ -52,7 +52,8 @@
                     android:text="Category Text"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:gravity="center_horizontal" />
             </LinearLayout>
 
         </LinearLayout>

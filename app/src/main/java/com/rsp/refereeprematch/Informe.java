@@ -5,10 +5,38 @@ public class Informe {
 
 
     String Nombre, ArbitroPrincipal, Asistente1, Asistente2, CapitanLocal, CapitanVisitante;
-    String EntrenadorLocal, EntrenadorVisitante, EquipoLocal, EquipoVisitante, GoleadorLocal;
+    String EntrenadorLocal, EntrenadorVisitante, EquipoLocal, EquipoVisitante, GoleadorLocal, Partido;
     String GoleadorVisitante;
     String JugadorConflictivoLocal;
     String JugadorConflictivoVisitante;
+    String EmailArbitroI;
+
+    public String getEmailArbitroI() {
+        return EmailArbitroI;
+    }
+
+    public void setEmailArbitroI(String emailArbitroI) {
+        EmailArbitroI = emailArbitroI;
+    }
+
+    public String getEmailA1I() {
+        return EmailA1I;
+    }
+
+    public void setEmailA1I(String emailA1I) {
+        EmailA1I = emailA1I;
+    }
+
+    public String getEmailA2I() {
+        return EmailA2I;
+    }
+
+    public void setEmailA2I(String emailA2I) {
+        EmailA2I = emailA2I;
+    }
+
+    String EmailA1I;
+    String EmailA2I;
 
     public String getJornada() {
         return jornada;
@@ -24,6 +52,13 @@ public class Informe {
 
     }
 
+    public String getPartido() {
+        return Partido;
+    }
+
+    public void setPartido(String partido) {
+        Partido = partido;
+    }
     public String getNombre() {
         return Nombre;
     }

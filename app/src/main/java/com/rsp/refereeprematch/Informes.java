@@ -1,6 +1,9 @@
 package com.rsp.refereeprematch;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -25,13 +28,27 @@ public class Informes extends AppCompatActivity {
     //Android
     public ListView listView;
     private ArrayList<Informe> arrayList = new ArrayList<>();
+    Button volverInforme;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.informes);
         db = FirebaseFirestore.getInstance();
         listView =  (ListView) findViewById(R.id.listadoView);
+        volverInforme = findViewById(R.id.btnvolverinformes);
         loadDatainListview();
+
+        volverInforme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                    Intent intent = new Intent(Informes.this, MenuPrincipalArbitro.class);
+                    startActivity(intent);
+
+
+            }
+        });
     }
 
     private void loadDatainListview(){

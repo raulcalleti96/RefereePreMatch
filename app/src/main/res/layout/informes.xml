@@ -5,10 +5,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <SearchView
-        android:layout_width="match_parent"
-        android:layout_height="61dp"
-        android:background="#E18179" />
+    <Button
+        android:id="@+id/btnvolverinformes"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/volveroro" />
 
     <ListView
         android:id="@+id/listadoView"

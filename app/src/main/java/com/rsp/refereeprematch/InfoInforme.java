@@ -28,23 +28,25 @@ public class InfoInforme extends AppCompatActivity {
     int id;
     FirebaseFirestore db;
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("TAG","Entra informe");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.infoinforme);
         Bundle b = getIntent().getExtras();
         nombre = b.getString("nombre");
+        Log.d("Tag",nombre);
         id = b.getInt("id");
         db = FirebaseFirestore.getInstance();
-        botonVolver = findViewById(R.id.volverbtnpartido);
-        botoneliminar = findViewById(R.id.guardarnuevocontacto);
+        botonVolver = findViewById(R.id.volverbtninfoinformei);
+        botoneliminar = findViewById(R.id.Eliminarinfoinformei);
         local = findViewById(R.id.localnuevotvi);
-        visitante = findViewById(R.id.equipovisitantetv);
-        competicion = findViewById(R.id.competiciontv);
-        fecha = findViewById(R.id.fechatv);
-        estadio = findViewById(R.id.estadiotv);
-        recibo = findViewById(R.id.recibotv);
-        arbitro = findViewById(R.id.arbitrotv);
-        asistente1 = findViewById(R.id.asistente1tv);
-        asistente2 = findViewById(R.id.asistente2tv);
+        visitante = findViewById(R.id.equipovisitantetvi);
+        competicion = findViewById(R.id.competiciontvi);
+        fecha = findViewById(R.id.fechatvi);
+        estadio = findViewById(R.id.estadiotvi);
+        recibo = findViewById(R.id.recibotvi);
+        arbitro = findViewById(R.id.arbitrotvi);
+        asistente1 = findViewById(R.id.asistente1tvi);
+        asistente2 = findViewById(R.id.asistente1tvi);
         capitanlocal = findViewById(R.id.CapitanLi);
         capitanvisitante = findViewById(R.id.CapitanVi);
         entrenadorlocal = findViewById(R.id.entrenadorlocal);
@@ -55,11 +57,10 @@ public class InfoInforme extends AppCompatActivity {
         conflictivovisitante = findViewById(R.id.ConflictivoVi);
         rellenaDatosInforme();
 
-        if(Constantes.IDUSUARIO == 0) {
-            botoneliminar.setVisibility(View.GONE);
-        }else{
-            botoneliminar.setVisibility(View.VISIBLE);
-        }
+        botoneliminar.setVisibility(View.GONE);
+
+        botoneliminar.setVisibility(View.VISIBLE);
+
     }
 
     public void rellenaDatosInforme() {
@@ -104,7 +105,7 @@ public class InfoInforme extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(InfoInforme.this, Partidos.class);
+                Intent intent = new Intent(InfoInforme.this, Informes.class);
                 startActivity(intent);
             }
         });
